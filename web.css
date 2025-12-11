@@ -845,3 +845,92 @@ div.aintelligenceb {
         justify-content: center;
     }
 }
+
+/* =========================================
+   RESPONSIVE FIX UTAMA UNTUK MOBILE
+   ========================================= */
+
+@media (max-width: 768px) {
+
+    /* RESET semua margin kiri yang besar */
+    * {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    /* Navbar */
+    .fdiv, .myprofile {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center !important;
+        align-items: center;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .fdiv img {
+        width: 80px;
+        height: auto;
+    }
+
+    /* Hilangkan item kecil yang bikin mepet */
+    #us, #coin, #location {
+        display: none;
+    }
+
+    /* Banner Hitam Besar */
+    .qdiv {
+        width: 100% !important;
+        height: auto !important;
+        padding: 20px;
+    }
+
+    .qdiv p, .qdiv h1 {
+        width: 100% !important;
+    }
+
+    #logogo {
+        display: none; /* Logo besar di kiri selalu merusak layout mobile */
+    }
+
+    /* Bagian NVIDIA GTC (kanan hitam / kiri putih) */
+    .aia, .aib {
+        flex-direction: column;
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 20px;
+    }
+
+    .aia img, .aib img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Blog Cards */
+    .aintelligence,
+    .aintelligencea,
+    .aintelligenceb {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .blog, .announcment,
+    .bloga, .announcmenta,
+    .blogb, .announcmentb {
+        width: 90% !important;
+        margin: auto !important;
+    }
+
+    /* Footer */
+    .comnepo {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .email {
+        justify-content: center !important;
+        padding-left: 0 !important;
+    }
+}
