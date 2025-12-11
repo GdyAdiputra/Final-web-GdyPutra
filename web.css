@@ -19,11 +19,22 @@
     text-decoration: none;
 }
 
+.myprofile {
+    display: flex;
+    margin-left: 820px;
+}
+
+.biodata, .contact, .posts {
+    text-decoration: none;
+    color: black;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+
 .shop {
     text-decoration: none;
     color: black;
     margin-right: 20px;
-    margin-left: 850px;
     margin-top: 20px;
 }
 
