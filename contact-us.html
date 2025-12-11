@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="bg-gray-100 min-h-screen flex justify-center items-center p-6">
+
+    <div class="w-full max-w-xl bg-white shadow-2xl rounded-xl p-8">
+        <h1 class="text-3xl font-bold text-center text-blue-600 mb-6">Student Registration Form</h1>
+
+        <p id="successMsg" class="hidden text-green-600 text-center font-semibold mb-4">
+            Registration Successful!
+        </p>
+
+        <form id="studentForm" class="space-y-4">
+
+            <div>
+                <label class="font-semibold">Full Name</label>
+                <input type="text" id="fullName"
+                    class="w-full mt-1 p-2 border rounded-lg focus:ring-2 focus:ring-blue-400 focus:outline-none">
+                <p class="text-red-500 text-sm hidden" id="errorName">Full name is required.</p>
+            </div>
+
+            <div>
+                <label class="font-semibold">Student ID (NIM)</label>
+                <input type="text" id="studentId"
+                    class="w-full mt-1 p-2 border rounded-lg focus:ring-2 focus:ring-blue-400 focus:outline-none">
+                <p class="text-red-500 text-sm hidden" id="errorNIM">Student ID is required.</p>
+            </div>
+
+            <div>
+                <label class="font-semibold">Email Address</label>
+                <input type="email" id="email"
+                    class="w-full mt-1 p-2 border rounded-lg focus:ring-2 focus:ring-blue-400 focus:outline-none">
+                <p class="text-red-500 text-sm hidden" id="errorEmail">Enter a valid email address.</p>
+            </div>
+
+            <div>
+                <label class="font-semibold">Faculty / Major</label>
+                <select id="faculty"
+                    class="w-full mt-1 p-2 border rounded-lg focus:ring-2 focus:ring-blue-400 focus:outline-none">
+                    <option value="">-- Select Faculty --</option>
+                    <option>Engineering</option>
+                    <option>Computer Science</option>
+                    <option>Business Administration</option>
+                    <option>Education</option>
+                    <option>Health Science</option>
+                </select>
+                <p class="text-red-500 text-sm hidden" id="errorFaculty">Please select a faculty.</p>
+            </div>
+
+            <div>
+                <label class="font-semibold">Date of Birth</label>
+                <input type="date" id="dob"
+                    class="w-full mt-1 p-2 border rounded-lg focus:ring-2 focus:ring-blue-400 focus:outline-none">
+                <p class="text-red-500 text-sm hidden" id="errorDOB">Please select your date of birth.</p>
+            </div>
+
+            <div>
+                <label class="font-semibold">Gender</label>
+                <div class="mt-1 flex items-center gap-6">
+                    <label class="flex items-center gap-2">
+                        <input type="radio" name="gender" value="Male" class="focus:ring-2 focus:ring-blue-400">
+                        Male
+                    </label>
+                    <label class="flex items-center gap-2">
+                        <input type="radio" name="gender" value="Female" class="focus:ring-2 focus:ring-blue-400">
+                        Female
+                    </label>
+                </div>
+                <p class="text-red-500 text-sm hidden" id="errorGender">Please select a gender.</p>
+            </div>
+
+            <div>
+                <label class="font-semibold">Address</label>
+                <textarea id="address" rows="3"
+                    class="w-full mt-1 p-2 border rounded-lg focus:ring-2 focus:ring-blue-400 focus:outline-none"></textarea>
+                <p class="text-red-500 text-sm hidden" id="errorAddress">Address is required.</p>
+            </div>
+
+            <div>
+                <label class="font-semibold">Phone Number</label>
+                <input type="text" id="phone"
+                    class="w-full mt-1 p-2 border rounded-lg focus:ring-2 focus:ring-blue-400 focus:outline-none">
+                <p class="text-red-500 text-sm hidden" id="errorPhone">Phone must be numeric and at least 10 digits.</p>
+            </div>
+
+            <button type="submit"
+                class="w-full bg-blue-600 text-white py-2 rounded-lg font-semibold hover:bg-blue-700">
+                Submit Registration
+            </button>
+
+        </form>
+
+    </div>
+
+    <script>
+        document.getElementById('studentForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const fullName = document.getElementById('fullName').value.trim();
+            const studentId = document.getElementById('studentId').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const faculty = document.getElementById('faculty').value;
+            const dob = document.getElementById('dob').value;
+            const gender = document.querySelector('input[name="gender"]:checked');
+            const address = document.getElementById('address').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            let valid = true;
+
+            document.querySelectorAll("p[id^='error']").forEach(e => e.classList.add('hidden'));
+
+            if (!fullName) { document.getElementById('errorName').classList.remove('hidden'); valid = false; }
+            if (!studentId) { document.getElementById('errorNIM').classList.remove('hidden'); valid = false; }
+
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!email || !emailPattern.test(email)) {
+                document.getElementById('errorEmail').classList.remove('hidden'); valid = false;
+            }
+
+            if (!faculty) { document.getElementById('errorFaculty').classList.remove('hidden'); valid = false; }
+            if (!dob) { document.getElementById('errorDOB').classList.remove('hidden'); valid = false; }
+            if (!gender) { document.getElementById('errorGender').classList.remove('hidden'); valid = false; }
+            if (!address) { document.getElementById('errorAddress').classList.remove('hidden'); valid = false; }
+            if (!phone || isNaN(phone) || phone.length < 10) {
+                document.getElementById('errorPhone').classList.remove('hidden'); valid = false;
+            }
+
+            if (!valid) return;
+
+            document.getElementById('successMsg').classList.remove('hidden');
+            document.getElementById('studentForm').reset();
+
+            setTimeout(() => {
+                document.getElementById('successMsg').classList.add('hidden');
+            }, 3000);
+        });
+    </script>
+
+</body>
+</html>
