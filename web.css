@@ -751,3 +751,97 @@ div.aintelligenceb {
     background-color: #a9e45b;
     cursor: pointer;
 }
+
+/* =========================================
+   RESPONSIVE FIX UNTUK HP (max-width 768px)
+   ========================================= */
+
+@media (max-width: 768px) {
+
+    /* Navbar */
+    .fdiv {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .myprofile {
+        margin-left: 0;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    #nvidia {
+        margin-left: 0;
+    }
+
+    /* Logo & Button */
+    #location, #signin, #search {
+        width: 30px;
+        height: auto;
+        margin: 5px;
+    }
+
+    /* Section Hitam */
+    .qdiv {
+        padding-left: 20px;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    #logogo {
+        display: none; /* hilangkan agar tidak rusak layout */
+    }
+
+    /* AI Section */
+    .ai h1, .ai p {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    /* Semua Quick Links */
+    .quick-links, .quick-linksa, .quick-linksb {
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-top: 20px;
+    }
+
+    /* Cards / Blog item */
+    .aintelligence,
+    .aintelligencea,
+    .aintelligenceb {
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .blog, .announcment,
+    .bloga, .announcmenta,
+    .blogb, .announcmentb {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* Text besar */
+    .aia h1, .aib h1 {
+        margin-left: 20px;
+    }
+    
+    .aia p, .aib p {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    /* Footer */
+    .comnepo {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .email {
+        padding-left: 20px;
+        justify-content: center;
+    }
+}
