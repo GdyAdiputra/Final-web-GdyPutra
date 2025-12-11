@@ -1,345 +1,427 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GdyPutra</title>
-    <link rel="stylesheet" href="web.css">
-     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <style>
-        .fdiv {
-            margin-bottom: -20px;
-            background-color: white ;
-            padding-bottom: 20px;
-            display: flex
-        }
-
-        .qdiv {
-            color: white;
-            border: 1px solid black;
-            background-color: black;
-            padding-left: 200px;
-            padding-top: 50px;
-            padding-bottom: 100px;
-            margin-left: -20px;
-            margin-right: -8px;
-        }
-    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NVIDIA Clone - Tailwind</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <div class="fdiv">
-        <img id="nvidia" src="image/nvidialogo.png">
-        <a class="nvidia-text" href="file:///C:/Users/Geraldy%20S.Y.A/OneDrive/Desktop/TugasWeb/WebGdy.html"><h2>Nvidia</h2></a>
-        <a class="product" href="https://www.nvidia.com/en-us">Product</a>
-        <a class="solution" href="https://www.nvidia.com/en-us">Solution</a>
-        <a class="industries" href="https://www.nvidia.com/en-us">Industries</a>
-        
-    <div class="myprofile">
-        <a class="biodata" href="biodata.html" target="_blank">Biodata</a>
-        <a class="contact" href="contact_us.html" target="_blank">Contact</a>
-        <a class="posts" href="posts.html" target="_blank">Posts</a>
-        <a class="posts" href="freepage.html" target="_blank">free page</a>
-        <a class="shop" href="https://marketplace.nvidia.com/en-us" target="_blank">Shop</a>
-        <a class="drivers" href="https://www.nvidia.com/en-us/drivers" target="_blank">Drivers</a>
-        <a class="support" href="https://www.nvidia.com/en-us/support" target="_blank">Support</a>
+<body class="font-sans bg-white">
+
+    <!-- NAVBAR -->
+    <div class="w-full flex items-center px-10 py-4 shadow">
+        <img src="image/nvidialogo.png" class="w-12 mr-4">
+
+        <a href="#" class="text-black font-bold text-xl mr-6">Nvidia</a>
+        <a href="#" class="text-black mx-4 mt-1">Product</a>
+        <a href="#" class="text-black mx-4 mt-1">Solution</a>
+        <a href="#" class="text-black mx-4 mt-1">Industries</a>
+
+        <div class="flex ml-auto space-x-6">
+            <a href="biodata.html" target="_blank" class="text-black mt-1">Biodata</a>
+            <a href="contact_us.html" target="_blank" class="text-black mt-1">Contact</a>
+            <a href="posts.html" target="_blank" class="text-black mt-1">Posts</a>
+            <a href="freepage.html" target="_blank" class="text-black mt-1">Free Page</a>
+            <a href="https://marketplace.nvidia.com/en-us" target="_blank" class="text-black mt-1">Shop</a>
+            <a href="https://www.nvidia.com/en-us/drivers" target="_blank" class="text-black mt-1">Drivers</a>
+            <a href="https://www.nvidia.com/en-us/support" target="_blank" class="text-black mt-1">Support</a>
+        </div>
+
+        <a href="#" class="ml-6">
+            <img src="image/search.png" class="w-6">
+        </a>
+        <img src="image/globe.png" class="w-10 ml-4">
+        <a href="#"><img src="image/login.png" class="w-20 ml-4"></a>
     </div>
-        <a id="search" href="https://www.nvidia.com/en-us"><img src="image/search.png" alt="search"></a>
-        <img id="location" src="image/globe.png" alt="location">
-        <a href="https://login.nvgs.nvidia.com/v1/account-list?preferred_nvidia=true&context=Initial&theme=Bright&locale=en-US&prompt=default&key=eyJhbGciOiJIUzI1NiJ9.eyJzZSI6InlCOFkiLCJ0b2tlbklkIjoiMTQzNTI1OTk2MTA2NjM4OTUwNCIsIm90IjoiMTQzNTI1OTk2MTA5MTU1NTMyOCIsImV4cCI6MTc2MjM0OTQ0MCwiaWF0IjoxNzYyMjYzMDQwLCJqdGkiOiIzMjQwYTgyMS0yNDMxLTRjZmEtYWE2OS02YzU2ZDJjNjE1MDQifQ.tEiTbJkVl2FibPEms7c8uRoS6derYIV4GvZaQNdGeVg&client_id=310670214980174257"><img id="signin" src="image/login.png" alt="Sign In"></a>
-    </div>
-    <div class="qdiv">
-        <h3>Data Center</h3>
-        <h1>NVIDIA, U.S. DOE, Oracle<br> Build AI Systems for<br> Scientific Discovery<img id="logogo" style="margin-left: 700px" src="image/logogo.png"></h1>
-        <p id="textN">Located at Argonne National Laboratory, the AI systems will<br> drive tech leadership across U.S. security, science, and energy<br> missions.</p>
-        <a href="https://nvidianews.nvidia.com/news/south-korea-ai-infrastructure"><input class="submit" type="submit" value="Read Press Release"></a>
-        <br>
-        <br>
-        <div class="choose">
-           <p style="margin-left: 20px;" class="datacenter">Data Center</p>
-           <p style="margin-left: 20px;" class="telecoms">Telecoms</p>
-           <p style="margin-left: 20px;" class="HPC">HPC</p>
-           <p style="margin-left: 20px;" class="automotive">Automotive</p>
-           <p style="margin-left: 20px;" class="simulation">Simulation</p>
-           <p style="margin-left: 20px;" class="center">Data Center</p>
+
+    <div class="bg-black text-white px-20 py-24">
+        <h3 class="text-xl mb-4">Data Center</h3>
+        <h1 class="text-5xl font-bold leading-tight">
+            NVIDIA, U.S. DOE, Oracle<br>
+            Build AI Systems for<br>
+            Scientific Discovery
+        </h1>
+
+        <p class="mt-6 text-lg">
+            Located at Argonne National Laboratory, the AI systems will
+            drive tech leadership across U.S. security, science, and energy missions.
+        </p>
+
+        <a href="#">
+            <button class="mt-6 bg-lime-500 px-6 py-3 rounded-md font-bold hover:bg-lime-400">
+                Read Press Release
+            </button>
+        </a>
+
+        <div class="flex space-x-6 mt-12 text-gray-300">
+            <p class="hover:text-white cursor-pointer">Data Center</p>
+            <p class="hover:text-white cursor-pointer">Telecoms</p>
+            <p class="hover:text-white cursor-pointer">HPC</p>
+            <p class="hover:text-white cursor-pointer">Automotive</p>
+            <p class="hover:text-white cursor-pointer">Simulation</p>
         </div>
     </div>
 
-    <div class="gtcsection">
-        <img class="gtclogo" src="image/nvidiawashington.png" alt="GTC Logo">
-        <div class="gtctext">
-            <h1>NVIDIA GTC Washington, D.C. 2025 Keynote</h1>
-            <p>
-            Watch the replay of the NVIDIA GTC Washington, D.C. keynote by CEO Jensen Huang and hear about
-            groundbreaking innovations transforming every industry and application.
-            <a class="watch-now" href="#">Watch Now →</a>
+    <div class="bg-gray-100 px-20 py-16 flex items-start space-x-10 border-t">
+        <img src="image/nvidiawashington.png" class="w-32">
+
+        <div>
+            <h1 class="text-3xl font-bold mb-3">NVIDIA GTC Washington, D.C. 2025 Keynote</h1>
+            <p class="text-lg leading-relaxed">
+                Watch the replay of the keynote by CEO Jensen Huang and hear about groundbreaking innovations
+                transforming every industry and application.
+                <a href="#" class="font-bold underline">Watch Now →</a>
             </p>
         </div>
     </div>
 
-    <div class="ai">
-        <h1>Artificial Intelligence</h1>
-        <p>AI is powering change in every industry. From<br>generative AI and speech recognition to medical<br>imaging and improved supply chain management,<br> AI is providing enterprises that compute power,<br> tools, and algorithms their teams need to do their<br> life's work.</p>
-    </div>
+    <div class="px-20 py-20">
 
-    <div class="aintelligence">
-
-        <div class="blog">
-            <a class="announcmentpic" href="https://blogs.nvidia.com/blog/physical-ai-smart-city-expo-world-congress"><img src="image/AI.png" alt="blog">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
             <div>
-                 <p id="paragraphann">Artificial Intelligence | Blog</p>
-                 <div class="hpi">
-                     <h3>Making Cities Smarter and Safer With<br> Physical AI</h3>
-                     <p>The growing NVIDIA physical AI ecosystem brings<br> new smart city technologies to Dublin, Raleigh, Ho<br> Chi Minh City, and beyond.</p>
-                 </div>
+                <h1 class="text-4xl font-bold mb-4">Artificial Intelligence</h1>
+                <p class="text-xl leading-relaxed">
+                    AI is powering change in every industry. From generative AI and speech recognition to
+                    medical imaging and improved supply chain management, AI is providing enterprises the
+                    compute power, tools, and algorithms their teams need to do their life's work.
+                </p>
+
+                <!-- Quick Links -->
+                <div class="mt-10">
+                    <p class="font-semibold text-lg text-black flex items-center">
+                        <span class="text-lime-600 mr-2 text-xl">^</span> Quick Links
+                    </p>
+
+                    <div class="mt-4 grid grid-cols-2 gap-x-10 gap-y-3 text-[17px] font-semibold">
+
+                        <a href="#" class="flex items-center text-black hover:underline">
+                            Overview <span class="text-lime-600 ml-1">></span>
+                        </a>
+
+                        <a href="#" class="flex items-center text-black hover:underline">
+                            Data Analytics <span class="text-lime-600 ml-1">></span>
+                        </a>
+
+                        <a href="#" class="flex items-center text-black hover:underline">
+                            Machine Learning <span class="text-lime-600 ml-1">></span>
+                        </a>
+
+                        <a href="#" class="flex items-center text-black hover:underline">
+                            Predictive Analytics <span class="text-lime-600 ml-1">></span>
+                        </a>
+
+                        <a href="#" class="flex items-center text-black hover:underline">
+                            Recommender Systems <span class="text-lime-600 ml-1">></span>
+                        </a>
+
+                        <a href="#" class="flex items-center text-black hover:underline">
+                            Speech AI <span class="text-lime-600 ml-1">></span>
+                        </a>
+
+                        <a href="#" class="flex items-center text-black hover:underline">
+                            Apache Spark <span class="text-lime-600 ml-1">></span>
+                        </a>
+
+                        <a href="#" class="flex items-center text-black hover:underline">
+                            RAPIDS <span class="text-lime-600 ml-1">></span>
+                        </a>
+
+                    </div>
+                </div>
             </div>
-            </a>
+            <div class="flex space-x-8">
+
+                <!-- Blog Card 1 -->
+                <div class="border shadow-sm hover:shadow-lg transition rounded-lg w-[340px] bg-white">
+                    <a href="#" class="text-black block">
+                        <img src="image/AI.png" class="w-full h-[180px] object-cover rounded-t-lg">
+                        <div class="px-4 py-4">
+                            <p class="font-bold">Artificial Intelligence | Blog</p>
+                            <h3 class="text-lg font-semibold mt-2 leading-tight">
+                                Making Cities Smarter and Safer With Physical AI
+                            </h3>
+                            <p class="mt-2 text-gray-700 text-sm leading-relaxed">
+                                The growing NVIDIA physical AI ecosystem brings new smart city technologies
+                                to Dublin, Raleigh, Ho Chi Minh City, and beyond.
+                            </p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Blog Card 2 -->
+                <div class="border shadow-sm hover:shadow-lg transition rounded-lg w-[340px] bg-white">
+                    <a href="#" class="text-black block">
+                        <img src="image/city.png" class="w-full h-[180px] object-cover rounded-t-lg">
+                        <div class="px-4 py-4">
+                            <p class="font-bold">Artificial Intelligence | Announcement</p>
+                            <h3 class="text-lg font-semibold mt-2 leading-tight">
+                                Jensen Huang Unveils Historic NVIDIA Partnership at APEC Summit
+                            </h3>
+                            <p class="mt-2 text-gray-700 text-sm leading-relaxed">
+                                South Korea is redefining its future with sovereign AI, supported by
+                                260,000 NVIDIA Blackwell GPUs.
+                            </p>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
         </div>
-        <div class="announcment" >
-            <a class="blogpic" href="https://blogs.nvidia.com/blog/physical-ai-smart-city-expo-world-congress"><img src="image/city.png" alt="blog">
+    </div>
+
+    <div class="px-20 py-20">
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
             <div>
-                 <p id="paragraphai">Artificial Intelligence | Announcement</p>
-                 <div class="hp">
-                     <h3>Jensen Huang Unveils Historic NVIDIA<br> Partnership at APEC Summit</h3>
-                     <p>South Korea is redefining its future with sovereign AI,<br> supported by 260,000 NVIDIA Blackwell GPUs.</p>
-                 </div>
+                <h1 class="text-4xl font-bold mb-4">Design and Simulation</h1>
+                <p class="text-xl leading-relaxed">
+                    NVIDIA RTX™ and NVIDIA Omniverse™ deliver the
+                    performance to help professionals, creators,
+                    developers, and students worldwide enhance
+                    creative workflows and build, operate, and connect
+                    metaverse applications.
+                </p>
+
+                <!-- Quick Links -->
+                <div class="mt-10">
+                    <p class="font-semibold text-lg text-black flex items-center">
+                        <span class="text-lime-600 mr-2 text-xl">^</span> Quick Links
+                    </p>
+
+                    <div class="mt-4 grid grid-cols-2 gap-x-10 gap-y-3 text-[17px] font-semibold">
+
+                        <a href="#" class="flex items-center text-black hover:underline">
+                            Shop <span class="text-lime-600 ml-1">></span>
+                        </a>
+
+                        <a href="#" class="flex items-center text-black hover:underline">
+                            Newsroom <span class="text-lime-600 ml-1">></span>
+                        </a>
+
+                        <a href="#" class="flex items-center text-black hover:underline">
+                            Professionals <span class="text-lime-600 ml-1">></span>
+                        </a>
+
+                        <a href="#" class="flex items-center text-black hover:underline">
+                            Creators <span class="text-lime-600 ml-1">></span>
+                        </a>
+
+                        <a href="#" class="flex items-center text-black hover:underline">
+                            Developers <span class="text-lime-600 ml-1">></span>
+                        </a>
+
+                        <a href="#" class="flex items-center text-black hover:underline">
+                            Researchers <span class="text-lime-600 ml-1">></span>
+                        </a>
+
+                        <a href="#" class="flex items-center text-black hover:underline">
+                            XR<span class="text-lime-600 ml-1">></span>
+                        </a>
+
+                    </div>
+                </div>
             </div>
-            </a>
-        </div>
+            <div class="flex space-x-8">
 
-    </div>
-    <br>
-    <br>
-    <br>
-    <div class="quick-links">
-        <div class="ql-title">
-             <span class="arrow-up">^</span> Quick Links
-        </div>
+                <!-- Blog Card 1 -->
+                <div class="border shadow-sm hover:shadow-lg transition rounded-lg w-[340px] bg-white">
+                    <a href="#" class="text-black block">
+                        <img src="image/kabel.png" class="w-full h-[180px] object-cover rounded-t-lg">
+                        <div class="px-4 py-4">
+                            <p class="font-bold">Simulation | Customer Story</p>
+                            <h3 class="text-lg font-semibold mt-2 leading-tight">
+                                Akila Optimizes Train Stations With
+                                Digital Twins and AI Agents
+                            </h3>
+                            <p class="mt-2 text-gray-700 text-sm leading-relaxed">
+                                Akila's digital twin platform helps SNCF
+                                Gares&Connexions boost efficiency with NVIDIA
+                                Metropolis and NVIDIA Omniverse.
+                            </p>
+                        </div>
+                    </a>
+                </div>
 
-        <div class="qlitems">
-             <a href="#">Overview</a>
-             <a href="#">Data Analytics</a>
-             <a href="#">Machine Learning</a><br>
-        </div>
-             <div class="Qlitems">
-             <a href="#">Predictive Analytics</a>
-             <a href="#">Recommender Systems</a><br>
-        </div>
-        <div class="items">
-             <a href="#">Speech AI</a>
-             <a href="#">Apache Spark</a>
-             <a href="#">RAPIDS</a>
-        </div>
-    </div>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <hr>
-    <br>
-    <br>
-    <br>
-    <br>
-    
-    <!--INI PEMBATAS-->
+                <!-- Blog Card 2 -->
+                <div class="border shadow-sm hover:shadow-lg transition rounded-lg w-[340px] bg-white">
+                    <a href="#" class="text-black block">
+                        <img src="image/robot.png" class="w-full h-[180px] object-cover rounded-t-lg">
+                        <div class="px-4 py-4">
+                            <p class="font-bold">Robotics | Blog</p>
+                            <h3 class="text-lg font-semibold mt-2 leading-tight">
+                                Generating Synthetic Worlds for
+                                Physical AI Development
+                            </h3>
+                            <p class="mt-2 text-gray-700 text-sm leading-relaxed">
+                                Learn how to use NVIDIA Omniverse libraries,
+                                Cosmos, and open models to generate physically
+                                based synthetic data at incredible scale.
+                            </p>
+                        </div>
+                    </a>
+                </div>
 
-    <div class="aia">
-        <h1>Design and Simulation</h1>
-        <p>NVIDIA RTX™ and NVIDIA Omniverse™ deliver the<br> performance to help professionals, creators,<br> developers, and students worldwide enhance<br> creative workflows and build, operate, and connect<br> metaverse applications.</p>
+            </div>
+        </div>
     </div>
 
-    <div class="aintelligencea">
+    <div class="px-20 py-20">
 
-        <div class="bloga">
-            <a class="announcmentpica" href="https://blogs.nvidia.com/blog/physical-ai-smart-city-expo-world-congress"><img src="image/kabel.png" alt="blog">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
             <div>
-                 <p id="paragraphanna">Simulation | Customer Story</p>
-                 <div class="hpia">
-                     <h3>Akila Optimizes Train Stations With<br> Digital Twins and AI Agents</h3>
-                     <p>Akila's digital twin platform helps SNCF<br> Gares&Connexions boost efficiency with NVIDIA<br> Metropolis and NVIDIA Omniverse.</p>
-                 </div>
+                <h1 class="text-4xl font-bold mb-4">High-Performance Computing</h1>
+                <p class="text-xl leading-relaxed">
+                    High-performance computing (HPC) is the ability
+                    to process data and perform complex calculations
+                    at high speeds. HPC is one of the most essential
+                    tools fueling the advancement of computational
+                    science.
+                </p>
+
+                <!-- Quick Links -->
+                <div class="mt-10">
+                    <p class="font-semibold text-lg text-black flex items-center">
+                        <span class="text-lime-600 mr-2 text-xl">^</span> Quick Links
+                    </p>
+
+                    <div class="mt-4 grid grid-cols-2 gap-x-10 gap-y-3 text-[17px] font-semibold">
+
+                        <a href="#" class="flex items-center text-black hover:underline">
+                            HPC Overview <span class="text-lime-600 ml-1">></span>
+                        </a>
+
+                        <a href="#" class="flex items-center text-black hover:underline">
+                            SC24 Event <span class="text-lime-600 ml-1">></span>
+                        </a>
+
+                        <a href="#" class="flex items-center text-black hover:underline">
+                            Supercomputing <span class="text-lime-600 ml-1">></span>
+                        </a>
+
+                        <a href="#" class="flex items-center text-black hover:underline">
+                            Healthcare <span class="text-lime-600 ml-1">></span>
+                        </a>
+
+                        <a href="#" class="flex items-center text-black hover:underline">
+                            Public Sector <span class="text-lime-600 ml-1">></span>
+                        </a>
+
+                        <a href="#" class="flex items-center text-black hover:underline">
+                            Energy <span class="text-lime-600 ml-1">></span>
+                        </a>
+
+                        <a href="#" class="flex items-center text-black hover:underline">
+                            NVIDIA HPC SDK <span class="text-lime-600 ml-1">></span>
+                        </a>
+
+                        <a href="#" class="flex items-center text-black hover:underline">
+                            NVIDIA PhysicsNeMo<span class="text-lime-600 ml-1">></span>
+                        </a>
+
+                    </div>
+                </div>
             </div>
-            </a>
-         </div>
-         <div class="announcmenta" >
-            <a class="blogpica" href="https://blogs.nvidia.com/blog/physical-ai-smart-city-expo-world-congress"><img src="image/robot.png" alt="blog">
+            <div class="flex space-x-8">
+
+                <!-- Blog Card 1 -->
+                <div class="border shadow-sm hover:shadow-lg transition rounded-lg w-[340px] bg-white">
+                    <a href="#" class="text-black block">
+                        <img src="image/server.png" class="w-full h-[180px] object-cover rounded-t-lg">
+                        <div class="px-4 py-4">
+                            <p class="font-bold">HPC | Announcement</p>
+                            <h3 class="text-lg font-semibold mt-2 leading-tight">
+                                NVIDIA Announces NVQLink for
+                                Quantum-GPU Computing
+                            </h3>
+                            <p class="mt-2 text-gray-700 text-sm leading-relaxed">
+                                GPU-QPU interconnect for AI-quantum
+                                supercomputing at six national labs and industry
+                                leaders.
+                            </p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Blog Card 2 -->
+                <div class="border shadow-sm hover:shadow-lg transition rounded-lg w-[340px] bg-white">
+                    <a href="#" class="text-black block">
+                        <img src="image/earth.png" class="w-full h-[180px] object-cover rounded-t-lg">
+                        <div class="px-4 py-4">
+                            <p class="font-bold">HPC | Announcement</p>
+                            <h3 class="text-lg font-semibold mt-2 leading-tight">
+                                NVIDIA Earth-2 Powers Next-Gen
+                                Extreme Weather Simulation
+                            </h3>
+                            <p class="mt-2 text-gray-700 text-sm leading-relaxed">
+                                MITRE turns sparse data into weather states for risk
+                                analysis with new framework.
+                            </p>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="bg-black text-white mt-20">
+        <div class="px-20 py-16 grid grid-cols-3 gap-20">
+
+            <!-- Company -->
             <div>
-                 <p id="paragraphaia">Robotics | Blog</p>
-                 <div class="hpa">
-                     <h3>Generating Synthetic Worlds for<br> Physical AI Development</h3>
-                     <p>Learn how to use NVIDIA Omniverse libraries,<br> Cosmos, and open models to generate physically<br> based synthetic data at incredible scale.</p>
-                 </div>
+                <h1 class="text-xl font-bold mb-3">Company Information</h1>
+                <hr class="border-gray-500 mb-4">
+                <div class="text-lime-400 space-y-2">
+                    <p>About Us</p>
+                    <p>Company Overview</p>
+                    <p>Investors</p>
+                    <p>Venture Capital</p>
+                    <p>NVIDIA Foundation</p>
+                    <p>Research</p>
+                    <p>Corporate Sustainability</p>
+                    <p>Careers</p>
+                </div>
             </div>
-            </a>
-        </div>
 
-    </div>
-    <br>
-    <br>
-    <br>
-    <div class="quick-linksa">
-
-        <div class="ql-titlea">
-             <span class="arrow-upa">^</span> Quick Links
-        </div>
-
-        <div class="qlitemsa">
-             <a href="#">Shop</a>
-             <a href="#">Newsroom</a>
-             <a href="#">Professionals</a><br>
-        </div>
-        <div class="Qlitemsa">
-             <a href="#">Creators</a>
-             <a href="#">Developers</a><br>
-        </div>
-        <div class="itemsa">
-             <a href="#">Researchers</a>
-             <a href="#">XR</a>
-        </div>
-
-    </div>  
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <hr>
-    <br>
-    <br>
-    <br>
-    <br>  
-    
-    <!--INI PEMBATAS-->
-    
-    <div class="aib">
-        <h1>High-Performance Computing</h1>
-        <p>High-performance computing (HPC) is the ability<br> to process data and perform complex calculations<br> at high speeds. HPC is one of the most essential<br> tools fueling the advancement of computational<br> science.</p>
-    </div>
-
-    <div class="aintelligenceb">
-
-        <div class="blogb">
-            <a class="announcmentpicb" href="https://blogs.nvidia.com/blog/physical-ai-smart-city-expo-world-congress"><img src="image/server.png" alt="blog">
+            <!-- News -->
             <div>
-                 <p id="paragraphannb">HPC | Announcement</p>
-                 <div class="hpib">
-                     <h3>NVIDIA Announces NVQLink for<br> Quantum-GPU Computing</h3>
-                     <p>GPU-QPU interconnect for AI-quantum<br> supercomputing at six national labs and industry<br> leaders.</p>
-                 </div>
+                <h1 class="text-xl font-bold mb-3">News and Events</h1>
+                <hr class="border-gray-500 mb-4">
+                <div class="text-lime-400 space-y-2">
+                    <p>Newsroom</p>
+                    <p>Company Blog</p>
+                    <p>Technical Blog</p>
+                    <p>Webinars</p>
+                    <p>Events Calendar</p>
+                    <p>GTC AI Conference</p>
+                </div>
             </div>
-            </a>
-         </div>
-         <div class="announcmentb" >
-            <a class="blogpicb" href="https://blogs.nvidia.com/blog/physical-ai-smart-city-expo-world-congress"><img src="image/earth.png" alt="blog">
+
+            <!-- Popular -->
             <div>
-                 <p id="paragraphaib">HPC | Announcement</p>
-                 <div class="hpb">
-                     <h3>NVIDIA Earth-2 Powers Next-Gen<br> Extreme Weather Simulation</h3>
-                     <p>MITRE turns sparse data into weather states for risk<br> analysis with new framework.</p>
-                 </div>
+                <h1 class="text-xl font-bold mb-3">Popular Links</h1>
+                <hr class="border-gray-500 mb-4">
+                <div class="text-lime-400 space-y-2">
+                    <p>Developers</p>
+                    <p>Partners</p>
+                    <p>Startups</p>
+                    <p>Documentation</p>
+                    <p>Training</p>
+                    <p>Professional Services</p>
+                </div>
             </div>
-            </a>
+
         </div>
 
-    </div>
-    <br>
-    <br>
-    <br>
-    <div class="quick-linksb">
+        <div class="px-20 py-10 flex items-center space-x-6">
+            <img src="image/email.png" class="w-10">
+            <h3 class="text-lg">Sign Up for NVIDIA News</h3>
+            <button class="bg-lime-500 px-6 py-2 rounded-md font-bold hover:bg-lime-400">
+                Subscribe
+            </button>
+        </div>
+    </footer>
 
-        <div class="ql-titleb">
-             <span class="arrow-upb">^</span> Quick Links
-        </div>
-
-        <div class="qlitemsb">
-             <a href="#">HPC Overview</a>
-             <a href="#">SC24 Event</a>
-             <a href="#">Supercomputing</a><br>
-        </div>
-        <div class="Qlitemsb">
-             <a href="#">Healthcare</a>
-             <a href="#">Public Sector</a><br>
-        </div>
-        <div class="itemsb">
-             <a href="#">Energy</a>
-             <a href="#">NVIDIA HPC SDK</a>
-             <a href="#">NVIDIA PhysicsNeMo</a>
-        </div>
-
-    </div>  
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <hr>
-    <br>
-    <br>
-    <br>
-    <br>
-    <footer>
-    <div class="comnepo">
-        <div class="company">
-            <h1>
-              Company Information
-            </h1>
-            <hr>
-            <a style="text-decoration: none;" href="#">
-            <div class="linkcom">
-              <p>About Us</p>
-              <p>Company Overview</p>
-              <p>Investors</p>
-              <p>Venture Capital (NVentures)</p>
-              <p>NVIDIA Foundation</p>
-              <p>Research</p>
-              <p>Corporate Sustainability</p>
-              <p>Technologies</p>
-              <p>Careers</p>
-            </div>
-            </a>
-        </div>
-        <div class="news">
-            <h1>News and Events</h1>
-            <hr>
-            <a style="text-decoration: none;" href="#">
-            <div class="linkne">
-              <p>Newsroom</p>
-              <p>Company Blog</p>
-              <p>Technical Blog</p>
-              <p>Webinars</p>
-              <p>Stay Informed</p>
-              <p>Events Calendar/p>
-              <p>GTC AI Conference</p>
-              <p>NVIDIA On-Demand</p>
-            </div>
-            </a>
-        </div>
-        <div class="popular">
-            <h1>Popular Links</h1>
-            <hr>
-            <a style="text-decoration: none;" href="#">
-            <div class="linkpo">
-              <p>Developers</p>
-              <p>Partners</p>
-              <p>Executive Insights</p>
-              <p>Startups and VCs</p>
-              <p>NVIDIA Connect for ISVs</p>
-              <p>Documentation</p>
-              <p>Technical Training</p>
-              <p>Professional Services for Data</p>
-              <p>Science</p>
-            </div>
-            </a>
-        </div>
-    </div>
-    <div class="email">
-        <img style="margin-right: 30px;" src="image/email.png" alt="email">
-        <h3 class="pemail">Sign Up for NVIDIA News</h3>
-        <input class="subscribe" type="submit" value="Subscribe">
-    </div>
-    </footer>  
 </body>
 </html>

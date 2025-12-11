@@ -4,98 +4,130 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Registration Form</title>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="bg-gray-100 min-h-screen flex justify-center items-center p-6">
+<body class="bg-gray-100 min-h-screen">
 
-    <div class="w-full max-w-xl bg-white shadow-2xl rounded-xl p-8">
-        <h1 class="text-3xl font-bold text-center text-blue-600 mb-6">Student Registration Form</h1>
+    <div class="w-full flex items-center px-10 py-4 shadow bg-white">
+        <img src="image/nvidialogo.png" class="w-12 mr-4">
 
-        <p id="successMsg" class="hidden text-green-600 text-center font-semibold mb-4">
-            Registration Successful!
-        </p>
+        <a href="index.html" class="text-black font-bold text-xl mr-6">Nvidia</a>
+        <a href="#" class="text-black mx-4 mt-1">Product</a>
+        <a href="#" class="text-black mx-4 mt-1">Solution</a>
+        <a href="#" class="text-black mx-4 mt-1">Industries</a>
 
-        <form id="studentForm" class="space-y-4">
+        <div class="flex ml-auto space-x-6">
+            <a href="biodata.html" class="text-black mt-1">Biodata</a>
+            <a href="contact_us.html" class="text-black mt-1 font-semibold underline">Contact</a>
+            <a href="posts.html" class="text-black mt-1">Posts</a>
+            <a href="freepage.html" class="text-black mt-1">Free Page</a>
+            <a href="https://marketplace.nvidia.com/en-us" target="_blank" class="text-black mt-1">Shop</a>
+            <a href="https://www.nvidia.com/en-us/drivers" target="_blank" class="text-black mt-1">Drivers</a>
+            <a href="https://www.nvidia.com/en-us/support" target="_blank" class="text-black mt-1">Support</a>
+        </div>
 
-            <div>
-                <label class="font-semibold">Full Name</label>
-                <input type="text" id="fullName"
-                    class="w-full mt-1 p-2 border rounded-lg focus:ring-2 focus:ring-blue-400 focus:outline-none">
-                <p class="text-red-500 text-sm hidden" id="errorName">Full name is required.</p>
-            </div>
+        <a href="#" class="ml-6">
+            <img src="image/search.png" class="w-6">
+        </a>
+        <img src="image/globe.png" class="w-10 ml-4">
+        <a href="#">
+            <img src="image/login.png" class="w-20 ml-4">
+        </a>
+    </div>
 
-            <div>
-                <label class="font-semibold">Student ID (NIM)</label>
-                <input type="text" id="studentId"
-                    class="w-full mt-1 p-2 border rounded-lg focus:ring-2 focus:ring-blue-400 focus:outline-none">
-                <p class="text-red-500 text-sm hidden" id="errorNIM">Student ID is required.</p>
-            </div>
+    <div class="flex justify-center items-center p-6 mt-10">
 
-            <div>
-                <label class="font-semibold">Email Address</label>
-                <input type="email" id="email"
-                    class="w-full mt-1 p-2 border rounded-lg focus:ring-2 focus:ring-blue-400 focus:outline-none">
-                <p class="text-red-500 text-sm hidden" id="errorEmail">Enter a valid email address.</p>
-            </div>
+        <div class="w-full max-w-xl bg-white shadow-2xl rounded-xl p-8">
+            <h1 class="text-3xl font-bold text-center text-green-400 mb-6">
+                Registration Form
+            </h1>
 
-            <div>
-                <label class="font-semibold">Faculty / Major</label>
-                <select id="faculty"
-                    class="w-full mt-1 p-2 border rounded-lg focus:ring-2 focus:ring-blue-400 focus:outline-none">
-                    <option value="">-- Select Faculty --</option>
-                    <option>Engineering</option>
-                    <option>Computer Science</option>
-                    <option>Business Administration</option>
-                    <option>Education</option>
-                    <option>Health Science</option>
-                </select>
-                <p class="text-red-500 text-sm hidden" id="errorFaculty">Please select a faculty.</p>
-            </div>
+            <p id="successMsg" class="hidden text-green-600 text-center font-semibold mb-4">
+                Registration Successful!
+            </p>
 
-            <div>
-                <label class="font-semibold">Date of Birth</label>
-                <input type="date" id="dob"
-                    class="w-full mt-1 p-2 border rounded-lg focus:ring-2 focus:ring-blue-400 focus:outline-none">
-                <p class="text-red-500 text-sm hidden" id="errorDOB">Please select your date of birth.</p>
-            </div>
+            <form id="studentForm" class="space-y-4">
 
-            <div>
-                <label class="font-semibold">Gender</label>
-                <div class="mt-1 flex items-center gap-6">
-                    <label class="flex items-center gap-2">
-                        <input type="radio" name="gender" value="Male" class="focus:ring-2 focus:ring-blue-400">
-                        Male
-                    </label>
-                    <label class="flex items-center gap-2">
-                        <input type="radio" name="gender" value="Female" class="focus:ring-2 focus:ring-blue-400">
-                        Female
-                    </label>
+                <div>
+                    <label class="font-semibold">Full Name</label>
+                    <input type="text" id="fullName"
+                        class="w-full mt-1 p-2 border rounded-lg focus:ring-2 focus:ring-blue-400 focus:outline-none">
+                    <p class="text-red-500 text-sm hidden" id="errorName">Full name is required.</p>
                 </div>
-                <p class="text-red-500 text-sm hidden" id="errorGender">Please select a gender.</p>
-            </div>
 
-            <div>
-                <label class="font-semibold">Address</label>
-                <textarea id="address" rows="3"
-                    class="w-full mt-1 p-2 border rounded-lg focus:ring-2 focus:ring-blue-400 focus:outline-none"></textarea>
-                <p class="text-red-500 text-sm hidden" id="errorAddress">Address is required.</p>
-            </div>
+                <div>
+                    <label class="font-semibold">Student ID (NIM)</label>
+                    <input type="text" id="studentId"
+                        class="w-full mt-1 p-2 border rounded-lg focus:ring-2 focus:ring-blue-400 focus:outline-none">
+                    <p class="text-red-500 text-sm hidden" id="errorNIM">Student ID is required.</p>
+                </div>
 
-            <div>
-                <label class="font-semibold">Phone Number</label>
-                <input type="text" id="phone"
-                    class="w-full mt-1 p-2 border rounded-lg focus:ring-2 focus:ring-blue-400 focus:outline-none">
-                <p class="text-red-500 text-sm hidden" id="errorPhone">Phone must be numeric and at least 10 digits.</p>
-            </div>
+                <div>
+                    <label class="font-semibold">Email Address</label>
+                    <input type="email" id="email"
+                        class="w-full mt-1 p-2 border rounded-lg focus:ring-2 focus:ring-blue-400 focus:outline-none">
+                    <p class="text-red-500 text-sm hidden" id="errorEmail">Enter a valid email address.</p>
+                </div>
 
-            <button type="submit"
-                class="w-full bg-blue-600 text-white py-2 rounded-lg font-semibold hover:bg-blue-700">
-                Submit Registration
-            </button>
+                <div>
+                    <label class="font-semibold">Faculty / Major</label>
+                    <select id="faculty"
+                        class="w-full mt-1 p-2 border rounded-lg focus:ring-2 focus:ring-blue-400 focus:outline-none">
+                        <option value="">-- Select Faculty --</option>
+                        <option>Engineering</option>
+                        <option>Computer Science</option>
+                        <option>Business Administration</option>
+                        <option>Education</option>
+                        <option>Health Science</option>
+                    </select>
+                    <p class="text-red-500 text-sm hidden" id="errorFaculty">Please select a faculty.</p>
+                </div>
 
-        </form>
+                <div>
+                    <label class="font-semibold">Date of Birth</label>
+                    <input type="date" id="dob"
+                        class="w-full mt-1 p-2 border rounded-lg focus:ring-2 focus:ring-blue-400 focus:outline-none">
+                    <p class="text-red-500 text-sm hidden" id="errorDOB">Please select your date of birth.</p>
+                </div>
 
+                <div>
+                    <label class="font-semibold">Gender</label>
+                    <div class="mt-1 flex items-center gap-6">
+                        <label class="flex items-center gap-2">
+                            <input type="radio" name="gender" value="Male" class="focus:ring-2 focus:ring-blue-400">
+                            Male
+                        </label>
+                        <label class="flex items-center gap-2">
+                            <input type="radio" name="gender" value="Female" class="focus:ring-2 focus:ring-blue-400">
+                            Female
+                        </label>
+                    </div>
+                    <p class="text-red-500 text-sm hidden" id="errorGender">Please select a gender.</p>
+                </div>
+
+                <div>
+                    <label class="font-semibold">Address</label>
+                    <textarea id="address" rows="3"
+                        class="w-full mt-1 p-2 border rounded-lg focus:ring-2 focus:ring-blue-400 focus:outline-none"></textarea>
+                    <p class="text-red-500 text-sm hidden" id="errorAddress">Address is required.</p>
+                </div>
+
+                <div>
+                    <label class="font-semibold">Phone Number</label>
+                    <input type="text" id="phone"
+                        class="w-full mt-1 p-2 border rounded-lg focus:ring-2 focus:ring-blue-400 focus:outline-none">
+                    <p class="text-red-500 text-sm hidden" id="errorPhone">Phone must be numeric and at least 10 digits.</p>
+                </div>
+
+                <button type="submit"
+                    class="w-full bg-green-600 text-white py-2 rounded-lg font-semibold hover:bg-green-700">
+                    Submit Registration
+                </button>
+
+            </form>
+
+        </div>
     </div>
 
     <script>
